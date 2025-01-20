@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/21 03:05:24 by sakitaha          #+#    #+#             */
+/*   Updated: 2025/01/21 03:07:01 by sakitaha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
@@ -14,16 +24,16 @@ private:
 
 public:
   // Default constructor
-  explicit Array() : ptr_(0), n_(0) {
-    printMsg("Array default constructor called");
-  }
+  Array() : ptr_(0), n_(0) { printMsg("Array default constructor called"); }
+
   // Custom constructor
-  explicit Array(unsigned int n) : ptr_(new T[n]()), n_(n) {
+  Array(unsigned int n) : ptr_(new T[n]()), n_(n) {
     printMsg("Array custom constructor called");
     for (unsigned int i = 0; i < this->n_; ++i) {
       this->ptr_[i] = 0;
     }
   }
+
   // Copy constructor
   Array(const Array &other) : ptr_(new T[other.n_]), n_(other.n_) {
     printMsg("Array copy constructor called");
@@ -31,11 +41,13 @@ public:
       this->ptr_[i] = other.ptr_[i];
     }
   }
+
   // Destructor
   ~Array() {
     printMsg("Array destructor called");
     delete[] this->ptr_;
   }
+
   // Copy assignment operator
   Array &operator=(const Array &other) {
     printMsg("Array copy assignment operator called");
@@ -49,6 +61,7 @@ public:
     }
     return *this;
   }
+
   // Operator[] overload
   T &operator[](unsigned int index) {
     if (index >= this->n_) {
@@ -56,6 +69,7 @@ public:
     }
     return this->ptr_[index];
   }
+
   // Operator[] overload const ver.
   const T &operator[](unsigned int index) const {
     if (index >= this->n_) {
@@ -63,6 +77,7 @@ public:
     }
     return this->ptr_[index];
   }
+
   // Returns the size of the array.
   unsigned int size() const { return this->n_; }
 
