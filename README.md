@@ -5,7 +5,7 @@
 - template <typename T>
 - グローバルスコープ
 - .tppファイル
-- explicitキーワード
+- explicit（暗黙的呼び出しを制限）
 
 ## Exercises
 ### Exercise 00: Start with a few functions
