@@ -33,3 +33,6 @@
 
 [Templates in C++ with Examples](https://www.geeksforgeeks.org/templates-cpp/)
 
+[std::out_of_range](https://en.cppreference.com/w/cpp/error/out_of_range)
+
+[explicit specifier](https://en.cppreference.com/w/cpp/language/explicit)

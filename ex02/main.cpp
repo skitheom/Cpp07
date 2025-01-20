@@ -6,12 +6,14 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 02:46:59 by sakitaha          #+#    #+#             */
-/*   Updated: 2025/01/21 02:47:00 by sakitaha         ###   ########.fr       */
+/*   Updated: 2025/01/21 03:01:10 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
+#include <ctime>
 #include <iostream>
+// #include <cstdlib>
 
 // #define MAX_VAL 750
 #define MAX_VAL 5
