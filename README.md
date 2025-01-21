@@ -36,3 +36,9 @@
 [std::out_of_range](https://en.cppreference.com/w/cpp/error/out_of_range)
 
 [explicit specifier](https://en.cppreference.com/w/cpp/language/explicit)
+
+[cpprefjp - C++日本語リファレンス / algorithm / min](https://cpprefjp.github.io/reference/algorithm/min.html)
+- 等価な要素が 2 つ以上あった場合には、最も左の要素を返す。
+
+[cpprefjp - C++日本語リファレンス / algorithm / max](https://cpprefjp.github.io/reference/algorithm/max.html)
+- 等価な要素が 2 つ以上あった場合には、最も左の要素を返す。
