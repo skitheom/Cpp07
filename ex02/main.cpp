@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 02:46:59 by sakitaha          #+#    #+#             */
-/*   Updated: 2025/01/21 03:03:38 by sakitaha         ###   ########.fr       */
+/*   Updated: 2025/01/21 14:55:39 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,13 @@ int main(int, char **) {
     test = numbers;
     for (int i = 0; i < MAX_VAL; i++) {
       std::cout << "numbers[" << i << "] : " << numbers[i] << "\t| test[" << i
-                << "] : " << test[i] << std::endl;
+                << "] : " << test[i] << "\tcopied using '=' operator"
+                << std::endl;
     }
   }
 
-  std::cout << "=== Check values between numbers and mirror ===" << std::endl;
+  std::cout << "=== Checking values between numbers and mirror ==="
+            << std::endl;
   for (int i = 0; i < MAX_VAL; i++) {
     std::cout << "numbers[" << i << "] : " << numbers[i] << "\t| mirror[" << i
               << "] : " << mirror[i] << std::endl;
@@ -86,8 +88,8 @@ int main(int, char **) {
     numbers[i] = rand();
   }
   for (int i = 0; i < MAX_VAL; i++) {
-    std::cout << "numbers[" << i << "] : " << numbers[i] << "\t| mirror[" << i
-              << "] : " << mirror[i] << std::endl;
+    std::cout << "Reassigned numbers[" << i << "] : " << numbers[i]
+              << "\t| mirror[" << i << "] : " << mirror[i] << std::endl;
   }
 
   delete[] mirror; //

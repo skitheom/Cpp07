@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 03:05:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2025/01/21 03:07:01 by sakitaha         ###   ########.fr       */
+/*   Updated: 2025/01/21 14:55:28 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,20 @@ private:
 
 public:
   // Default constructor
-  Array() : ptr_(0), n_(0) { printMsg("Array default constructor called"); }
+  Array() : ptr_(new T[0]()), n_(0) {
+    printMsg("Array default constructor called");
+  }
 
   // Custom constructor
   Array(unsigned int n) : ptr_(new T[n]()), n_(n) {
-    printMsg("Array custom constructor called");
+    printMsg("Array size constructor called");
     for (unsigned int i = 0; i < this->n_; ++i) {
       this->ptr_[i] = 0;
     }
   }
 
   // Copy constructor
-  Array(const Array &other) : ptr_(new T[other.n_]), n_(other.n_) {
+  Array(const Array &other) : ptr_(new T[other.n_]()), n_(other.n_) {
     printMsg("Array copy constructor called");
     for (unsigned int i = 0; i < this->n_; ++i) {
       this->ptr_[i] = other.ptr_[i];
@@ -54,7 +56,7 @@ public:
     if (this != &other) {
       delete[] ptr_;
       this->n_ = other.n_;
-      this->ptr_ = new T[this->n_];
+      this->ptr_ = new T[this->n_]();
       for (unsigned int i = 0; i < this->n_; ++i) {
         this->ptr_[i] = other.ptr_[i];
       }
